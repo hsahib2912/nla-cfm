@@ -1,0 +1,52 @@
+     <div class="form-check " >
+                <input class="form-check-input" type="checkbox" name="inlineCheckbox1" value="option1">
+                <label class="form-check-label" for="inlineCheckbox1">{{itching}}</label>
+            
+            </div>
+            <div class="form-check ">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                <label class="form-check-label" for="inlineCheckbox2">{{skin_rash}}</label>
+            </div>
+            <div class="form-check ">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" >
+                <label class="form-check-label" for="inlineCheckbox3">{{vomiting}}</label>
+            </div>
+            <div class="form-check " >
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4">
+                <label class="form-check-label" for="inlineCheckbox4">{{patches_in_throat}}</label>
+            
+            </div>
+            <div class="form-check ">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option5">
+                <label class="form-check-label" for="inlineCheckbox5">{{high_fever}}</label>
+            </div>
+            <div class="form-check ">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox6" value="option6" >
+                <label class="form-check-label" for="inlineCheckbox6">{{yellowish_skin}}</label>
+            </div>
+            <div class="form-check " >
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox7" value="option7">
+                <label class="form-check-label" for="inlineCheckbox7">{{indigestion}}</label>
+            
+            </div>
+            <div class="form-check ">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox8" value="option8">
+                <label class="form-check-label" for="inlineCheckbox8">{{cough}}</label>
+            </div>
+            <div class="form-check ">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox9" value="option9" >
+                <label class="form-check-label" for="inlineCheckbox9">{{nausea}}</label>
+            </div>
+            <div class="form-check " >
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox10" value="option10">
+                <label class="form-check-label" for="inlineCheckbox10">{{ulcers_on_tongue}}</label>
+            
+            </div>
+            <div class="form-check ">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox11" value="option11">
+                <label class="form-check-label" for="inlineCheckbox11">{{watering_from_eyes}}</label>
+            </div>
+            <div class="form-check ">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox12" value="option12" >
+                <label class="form-check-label" for="inlineCheckbox12">{{chills}}</label>
+            </div>

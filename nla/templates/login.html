@@ -1,0 +1,105 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Enter details</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="{% static 'images/icons/favicon.ico' %}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome-4.7.0/css/font-awesome.min.css'%}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/animate/animate.css'%}">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/css-hamburgers/hamburgers.min.css'%}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/select2/select2.min.css'%}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/util.css'%}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css'%}">
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class="login100-pic js-tilt" data-tilt>
+					<img src="{% static 'images/doctor.png'%}" alt="IMG">
+				</div>
+
+				<form class="login100-form validate-form" action='symptoms/' method='GET'>
+					
+					<span class="login100-form-title">
+						Native Language Assistant
+					</span>
+
+					<div class="wrap-input100 validate-input" data-validate = "Name is required">
+						<input class="input100" type="text" name="Name" placeholder="Name">
+						<span class="focus-input100"></span>
+					</div>
+					<span class="login100-form-title">
+						Preferred Language
+					</span>
+					<div class="form-check " >
+						<input class="form-check-input" type="checkbox" name="lang" value="hindi" >
+						<label class="form-check-label" for="hindi">Hindi</label>
+					
+					</div>
+					<div class="form-check ">
+						<input class="form-check-input" type="checkbox" name="lang" value="punjabi">
+						<label class="form-check-label" for="punjabi">Punjabi</label>
+					</div>
+					<div class="form-check ">
+						<input class="form-check-input" type="checkbox" name="lang" value="english" >
+						<label class="form-check-label" for="english">English</label>
+					</div>
+					<div class="form-check ">
+						<input class="form-check-input" type="checkbox" name="lang" value="malayalam" >
+						<label class="form-check-label" for="malayalam">Malayalam</label>
+					</div>
+					<div class="form-check ">
+						<input class="form-check-input" type="checkbox" name="lang" value="urdu" >
+						<label class="form-check-label" for="urdu">Urdu</label>
+					</div>
+					<div class="form-check ">
+						<input class="form-check-input" type="checkbox" name="lang" value="gujarati" >
+						<label class="form-check-label" for="gujarati">Gujarati</label>
+					</div>
+					<div class="container-login100-form-btn">
+						<button type = 'submit' class="login100-form-btn">
+							Proceed
+						</button>
+					</div>
+
+					<div class="text-center p-t-136"></div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+	
+
+	
+<!--===============================================================================================-->	
+	<script src="{% static 'vendor/jquery/jquery-3.2.1.min.js'%}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'vendor/bootstrap/js/popper.js'%}"></script>
+	<script src="{% static 'vendor/bootstrap/js/bootstrap.min.js'%}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'vendor/select2/select2.min.js'%}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'vendor/tilt/tilt.jquery.min.js'%}"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+<!--===============================================================================================-->
+	<script src="{% static 'js/main.js'%}"></script>
+
+</body>
+</html>
