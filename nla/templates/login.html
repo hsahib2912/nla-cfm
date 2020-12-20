@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
-	<link rel="icon" type="image/png" href="{% static 'images/icons/favicon.ico' %}"/>
+	<link rel="icon" type="image/png" href="{% static 'images/icons/cfm.png' %}"/>
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
 <!--===============================================================================================-->
@@ -21,6 +21,16 @@
 	<link rel="stylesheet" type="text/css" href="{% static 'css/util.css'%}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css'%}">
 <!--===============================================================================================-->
+	<style type="text/css">
+	.center {
+		left: 65%;
+		padding-left : 30%;
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		font-size: 110%;
+		font-weight: bold;
+		
+	}
+	</style>
 </head>
 <body>
 	
@@ -41,34 +51,36 @@
 						<input class="input100" type="text" name="Name" placeholder="Name">
 						<span class="focus-input100"></span>
 					</div>
-					<span class="login100-form-title">
+					<span class="login100-form-title", padding-top = 40%>
 						Preferred Language
 					</span>
-					<div class="form-check " >
-						<input class="form-check-input" type="checkbox" name="lang" value="hindi" >
-						<label class="form-check-label" for="hindi">Hindi</label>
-					
-					</div>
-					<div class="form-check ">
-						<input class="form-check-input" type="checkbox" name="lang" value="punjabi">
-						<label class="form-check-label" for="punjabi">Punjabi</label>
-					</div>
-					<div class="form-check ">
-						<input class="form-check-input" type="checkbox" name="lang" value="english" >
+					<div class = "center">
+					<div class="radio">
+						<input class="form-check-input" type="radio" name="lang" value="english" >
 						<label class="form-check-label" for="english">English</label>
 					</div>
-					<div class="form-check ">
-						<input class="form-check-input" type="checkbox" name="lang" value="malayalam" >
-						<label class="form-check-label" for="malayalam">Malayalam</label>
+					<div class="radio" >
+						<input class="form-check-input" type="radio" name="lang" value="hindi" >
+						<label class="form-check-label" for="hindi">हिंदी</label>
+					
 					</div>
-					<div class="form-check ">
-						<input class="form-check-input" type="checkbox" name="lang" value="urdu" >
-						<label class="form-check-label" for="urdu">Urdu</label>
+					<div class="radio">
+						<input class="form-check-input" type="radio" name="lang" value="punjabi">
+						<label class="form-check-label" for="punjabi">ਪੰਜਾਬੀ</label>
 					</div>
-					<div class="form-check ">
-						<input class="form-check-input" type="checkbox" name="lang" value="gujarati" >
-						<label class="form-check-label" for="gujarati">Gujarati</label>
+					<div class="radio">
+						<input class="form-check-input" type="radio" name="lang" value="malayalam" >
+						<label class="form-check-label" for="malayalam">മലയാളം</label>
 					</div>
+					<div class="radio">
+						<input class="form-check-input" type="radio" name="lang" value="urdu" >
+						<label class="form-check-label" for="urdu">اردو</label>
+					</div>
+					<div class="radio">
+						<input class="form-check-input" type="radio" name="lang" value="gujarati" >
+						<label class="form-check-label" for="gujarati">પાસ</label>
+					</div>
+				</div>
 					<div class="container-login100-form-btn">
 						<button type = 'submit' class="login100-form-btn">
 							Proceed

@@ -424,7 +424,6 @@ def get_sym(lan):
             'itching': 'Itching'
             }
     elif (lan == 'punjabi'):
-        print('in punjabi')
         sym ={
             'abdominal_pain': 'ਪੇਟ ਦਰਦ',
             'abnormal_menstruation': 'ਅਸਾਧਾਰਣ ਮਾਹਵਾਰੀ',
@@ -690,7 +689,7 @@ def get_sym(lan):
             'yellowing_of_eyes': 'آنکھوں کا پیلا ہونا',
             'yellowish_skin': 'زرد جلد',
             'itching': 'خارش زدہ'}
-    elif (lan == 'malyalam'):
+    elif (lan == 'malayalam'):
         sym = {
             'abdominal_pain': 'വയറുവേദന',
             'abnormal_menstruation': 'അസാധാരണമായ ആർത്തവം',
@@ -958,6 +957,23 @@ def get_sym(lan):
             'itching': 'ખંજવાળ'}
     return sym
 
+def get_doctors():
+    if (lan == 'hindi'):
+        z = 'डॉक्टर्स से संपर्क करें'
+    elif (lan == 'english'):
+        z = 'Contact doctors'
+    elif (lan == 'punjabi'):
+        z = 'ਸੰਪਰਕ ਕਰੋ ਡਾਕਟਰਾਂ ਨਾਲ'
+    elif (lan == 'urdu'):
+        z = 'ڈاکٹروں سے رابطہ کریں'
+    elif (lan == 'malayalam'):
+        z = 'ഡോക്ടർമാരുമായി ബന്ധപ്പെടുക'
+    elif (lan == 'gujarati'):
+        z = 'ડોકટરોનો સંપર્ક કરો'
+    return z
+
+
+
 
 def select_symptoms(request):
     name_v = request.GET.get('Name')
@@ -998,6 +1014,7 @@ def pricing(request):
     clf = pickle.load(open('model_clf', 'rb'))
 
     k = clf.predict(sym_tupple)[0]
+    prob = round(max(clf.predict_proba(sym_tupple)[0])*100,2)
 
     with open('new_data.csv','r') as f:
         reader= csv.reader(f)
@@ -1010,5 +1027,27 @@ def pricing(request):
                 ds = i[131]
                 break
         
+    k = trans(name+', our model predicts your disease as : '+ds+' with '+ str(prob)+ '% chances',lan)
 
-    return HttpResponse(ds)
+    df = pd.read_csv('doctors.csv')
+    docs = np.where(df['Languages']==lan)[0]
+
+    
+    doc1name = df['Name'][docs[0]]
+    doc1num = df['Contact'][docs[0]]
+    doc2name = df['Name'][docs[1]]
+    doc2num = df['Contact'][docs[1]]
+
+    c_docs = get_doctors()
+    data = {
+        'info' : k,
+        'd1' : doc1name,
+        'dc1': doc1num,
+        'd2' : doc2name,
+        'dc2': doc2num,
+        'cd' : c_docs
+
+    }
+
+
+    return render(request,'final.html',data)
